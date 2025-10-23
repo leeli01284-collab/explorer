@@ -101,7 +101,7 @@ function TabInstructions() {
             content: (
                 <div className="p-3">
                     Add <code>base64</code> crate dependency and{' '}
-                    <code>println!(&quot;{}&quot;, base64::encode(&transaction.message_data()));</code>
+                    <code>println!(&quot;&quot;, base64::encode(&transaction.message_data()));</code>
                 </div>
             ),
             id: 'rust',
