@@ -27,7 +27,7 @@ function decodeAccountData(
         const coder = new BorshAccountsCoder(anchorProgram.idl);
         
         // Ensure rawData is a Buffer for discriminator comparison
-        const dataBuffer = rawData as Buffer;
+        const dataBuffer = Buffer.isBuffer(rawData) ? rawData : Buffer.from(rawData);
         
         if (dataBuffer.length < 8) {
             console.error(
